@@ -2,7 +2,7 @@ package algorithms.search;
 
 import java.util.Arrays;
 
-class BinarySearch {
+public class BinarySearch {
   /**
    * Binary search implementation with generics. This Algorithm have have capacity to search int,
    * String, char and other data types. Add array in main method as illustrated. Change the generic

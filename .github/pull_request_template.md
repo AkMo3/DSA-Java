@@ -1,6 +1,8 @@
 ### **Describe your change:**
 
-- [ ] Add an extra password cases?
+- [ ] Add an Algorithm?
+- [ ] Add a Data Structure?
+- [ ] Add a Program not related to above?
 - [ ] Fix a bug or typo in an existing cases?
 - [ ] Documentation change?
 
