@@ -1,4 +1,4 @@
-package algorithms.sort.binarysearch;
+package algorithms.search;
 
 import java.util.Arrays;
 
@@ -15,11 +15,11 @@ class BinarySearch {
    */
   public static void main(String[] args) {
     // add Array
-    String[] a = {"sanket", "akash", "varad", "omdeep", "nikhil"};
+    String[] a = {"Jadeja", "Sachin", "Kohli", "Ashwin", "Bhuvi"};
     // change the generic according to need. Generic refers to parameters in <>.
     BinarySearcher<String> obj = new BinarySearcher<String>(a);
     // search method returns the index of element that it will have in sorted form of that array.
-    System.out.println(obj.search("akash"));
+    System.out.println(obj.search("Kohli"));
   }
 
   // class BinarySearcher used to call search method.
@@ -27,7 +27,7 @@ class BinarySearch {
     private E[] array;
 
     public BinarySearcher(E[] elements) {
-      a = elements;
+      array = elements;
     }
 
     /**
