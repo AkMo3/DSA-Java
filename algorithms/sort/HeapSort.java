@@ -1,17 +1,18 @@
 /*********************************************************************
  * This code makes a Priority Queue and returns tha max value from that
  * so the nam MaxPriorityQueue.
- * 
+ *
  * @author Akash Mondal.
  * @version 1.0.1 .
- * 
+ *
  * While declaring this class, remember that this is not an autosizing Priority Queue,
  * so the size is to be declared while making instance this class.
  ************************************************************************/
 
-public class HeapSort<K extends  Comparable<K>> {
+public class HeapSort<K extends Comparable<K>> {
   /**
    * Sorts array using HeapSort in LogN time.
+   *
    * @param pq array that is to be sorted.
    */
   public static void sort(Comparable[] pq) {
@@ -27,13 +28,14 @@ public class HeapSort<K extends  Comparable<K>> {
   }
 
   /**
-  * Element whos priority is to be decreased.
-  * @param k index of element in that array.
-  */
+   * Element whos priority is to be decreased.
+   *
+   * @param k index of element in that array.
+   */
   private static void sink(Comparable[] pq, int k, int size) {
     while (2 * k <= size) {
       int j = 2 * k;
-      if (j < size && less(pq, j,j + 1)) { 
+      if (j < size && less(pq, j, j + 1)) {
         j++;
       }
       if (!less(pq, k, j)) {
@@ -46,6 +48,7 @@ public class HeapSort<K extends  Comparable<K>> {
 
   /**
    * Compares the value of element in array at index of i and j.
+   *
    * @param i index of first element.
    * @param j index of second element.
    * @return Statement if first less than second.
@@ -56,6 +59,7 @@ public class HeapSort<K extends  Comparable<K>> {
 
   /**
    * Exchange elements in array at position i and j.
+   *
    * @param i index of first element.
    * @param j index of second element.
    */
@@ -64,6 +68,4 @@ public class HeapSort<K extends  Comparable<K>> {
     pq[i] = pq[j];
     pq[j] = t;
   }
-
-
 }
