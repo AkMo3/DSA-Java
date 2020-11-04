@@ -1,28 +1,30 @@
 /*********************************************************************
  * This code makes a Priority Queue and returns tha max value from that
  * so the nam MaxPriorityQueue.
- * 
+ *
  * @author Akash Mondal.
  * @version 1.0.1 .
- * 
+ *
  * While declaring this class, remember that this is not an autosizing Priority Queue,
  * so the size is to be declared while making instance this class.
  ************************************************************************/
 
-public class MaxPriorityQueue<K extends  Comparable<K>> {
+public class MaxPriorityQueue<K extends Comparable<K>> {
   private K[] pq;
   private int size = 0;
 
   /**
-  * Constructor of MaxPriorityQueue class.
-  * @param capacity of Priority Queue.
-  */
+   * Constructor of MaxPriorityQueue class.
+   *
+   * @param capacity of Priority Queue.
+   */
   public MaxPriorityQueue(int capacity) {
     pq = (K[]) new Comparable[capacity];
   }
 
   /**
    * Element that is to be given higher Priority.
+   *
    * @param k index of element in that array.
    */
   private void swim(int k) {
@@ -31,15 +33,16 @@ public class MaxPriorityQueue<K extends  Comparable<K>> {
       k = k / 2;
     }
   }
-    
+
   /**
-  * Element whos priority is to be decreased.
-  * @param k index of element in that array.
-  */
+   * Element whos priority is to be decreased.
+   *
+   * @param k index of element in that array.
+   */
   private void sink(int k) {
     while (2 * k <= size) {
       int j = 2 * k;
-      if (j < size && less(j,j + 1)) { 
+      if (j < size && less(j, j + 1)) {
         j++;
       }
       if (!less(k, j)) {
@@ -52,6 +55,7 @@ public class MaxPriorityQueue<K extends  Comparable<K>> {
 
   /**
    * Deletes the maximum value item from Priority Queue and return that.
+   *
    * @return Maximum element of PQ.
    */
   public K delMax() {
@@ -64,6 +68,7 @@ public class MaxPriorityQueue<K extends  Comparable<K>> {
 
   /**
    * Add element in PQ.
+   *
    * @param x Element that is to be added in PQ.
    */
   public void insert(K x) {
@@ -73,6 +78,7 @@ public class MaxPriorityQueue<K extends  Comparable<K>> {
 
   /**
    * Compares the value of element in array at index of i and j.
+   *
    * @param i index of first element.
    * @param j index of second element.
    * @return Statement if first less than second.
@@ -83,6 +89,7 @@ public class MaxPriorityQueue<K extends  Comparable<K>> {
 
   /**
    * Exchange elements in array at position i and j.
+   *
    * @param i index of first element.
    * @param j index of second element.
    */
