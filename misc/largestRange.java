@@ -28,18 +28,19 @@ public class largestRange {
         currentRange += 1;
         right++;
       }
-      if (currentRange > longestRange) longestRange = currentRange; // Store longest range at every interation
+      if (currentRange > longestRange)
+        longestRange = currentRange; // Store longest range at every interation
     }
     return longestRange;
   }
 
   public static void main(String[] args) {
     // Testcases
-    assert longestRange(new int[] { 1, 2, 3, 4, -1, 11, 10 }) == 4;
+    assert longestRange(new int[] {1, 2, 3, 4, -1, 11, 10}) == 4;
     // The longest consecutive number range is of length 4 i.e. {1, 2, 3, 4}
-    assert longestRange(new int[] { -1, 1, 3, 5, 7 }) == 1;
+    assert longestRange(new int[] {-1, 1, 3, 5, 7}) == 1;
     // The longest consecutive number range is of length 1 i.e. any of the element alone
-    assert longestRange(new int[] { 0, 1, 2, 3, 4, 7, 6, 5 }) == 8;
+    assert longestRange(new int[] {0, 1, 2, 3, 4, 7, 6, 5}) == 8;
     // The longest consecutive number range is of length 8 i.e. {0, 1, 2, 3, 4, 5, 6, 7}
   }
 }
