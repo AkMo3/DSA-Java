@@ -5,8 +5,12 @@ public class largestRange {
   // Finds the length of longest occurring consecutive numbers range in an array
   public static int longestRange(int[] nums) {
     int longestRange = 0;
-    HashMap<Integer, Boolean> num = new HashMap<>(); // Stores a mapping of a number to whether the current number is part of a
-    // particular consecutive range or not
+    HashMap<Integer, Boolean> num = new HashMap<>();
+
+    /**
+     * Stores a mapping of a number to whether the current number is part of a particular
+     * consecutive range or not.
+     */
     for (int x : nums) num.put(x, true);
     for (int x : nums) {
       if (!num.get(x)) continue;
@@ -14,23 +18,17 @@ public class largestRange {
       int currentRange = 1;
       int left = x - 1;
       int right = x + 1;
-      while (
-        num.containsKey(left)
-      ) { // Search leftwards for consecutive range
+      while (num.containsKey(left)) { // Search leftwards for consecutive range
         num.replace(left, false);
         currentRange += 1;
         left--;
       }
-      while (
-        num.containsKey(right)
-      ) { // Search rightwards for consecutive range
+      while (num.containsKey(right)) { // Search rightwards for consecutive range
         num.replace(right, false);
         currentRange += 1;
         right++;
       }
-      if (
-        currentRange > longestRange
-      ) longestRange = currentRange; // Store longest range at every interation
+      if (currentRange > longestRange) longestRange = currentRange; // Store longest range at every interation
     }
     return longestRange;
   }
