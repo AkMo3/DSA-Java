@@ -1,3 +1,5 @@
+package Algorithms.Sort;
+
 /*********************************************************************
  * This code makes a Priority Queue and returns tha max value from that
  * so the nam MaxPriorityQueue.
@@ -9,28 +11,21 @@
  * so the size is to be declared while making instance this class.
  ************************************************************************/
 
-public class MaxPriorityQueue<K extends Comparable<K>> {
-  private K[] pq;
-  private int size = 0;
-
+public class HeapSort<K extends Comparable<K>> {
   /**
-   * Constructor of MaxPriorityQueue class.
+   * Sorts array using HeapSort in LogN time.
    *
-   * @param capacity of Priority Queue.
+   * @param pq array that is to be sorted.
    */
-  public MaxPriorityQueue(int capacity) {
-    pq = (K[]) new Comparable[capacity];
-  }
+  public static void sort(Comparable[] pq) {
+    int size = pq.length;
+    for (int k = size / 2; k >= 1; k--) {
+      sink(pq, k, size);
+    }
 
-  /**
-   * Element that is to be given higher Priority.
-   *
-   * @param k index of element in that array.
-   */
-  private void swim(int k) {
-    while (k > 1 && less(k / 2, k)) {
-      exch(k, k / 2);
-      k = k / 2;
+    while (size > 1) {
+      exch(pq, 1, size);
+      sink(pq, 1, --size);
     }
   }
 
@@ -39,41 +34,18 @@ public class MaxPriorityQueue<K extends Comparable<K>> {
    *
    * @param k index of element in that array.
    */
-  private void sink(int k) {
+  private static void sink(Comparable[] pq, int k, int size) {
     while (2 * k <= size) {
       int j = 2 * k;
-      if (j < size && less(j, j + 1)) {
+      if (j < size && less(pq, j, j + 1)) {
         j++;
       }
-      if (!less(k, j)) {
+      if (!less(pq, k, j)) {
         break;
       }
-      exch(k, j);
+      exch(pq, k, j);
       k = j;
     }
-  }
-
-  /**
-   * Deletes the maximum value item from Priority Queue and return that.
-   *
-   * @return Maximum element of PQ.
-   */
-  public K delMax() {
-    K max = pq[1];
-    exch(1, size--);
-    sink(1);
-    pq[size + 1] = null;
-    return max;
-  }
-
-  /**
-   * Add element in PQ.
-   *
-   * @param x Element that is to be added in PQ.
-   */
-  public void insert(K x) {
-    pq[++size] = x;
-    swim(size);
   }
 
   /**
@@ -83,7 +55,7 @@ public class MaxPriorityQueue<K extends Comparable<K>> {
    * @param j index of second element.
    * @return Statement if first less than second.
    */
-  private boolean less(int i, int j) {
+  private static boolean less(Comparable[] pq, int i, int j) {
     return pq[i].compareTo(pq[j]) < 0;
   }
 
@@ -93,8 +65,8 @@ public class MaxPriorityQueue<K extends Comparable<K>> {
    * @param i index of first element.
    * @param j index of second element.
    */
-  private void exch(int i, int j) {
-    K t = pq[i];
+  private static void exch(Comparable[] pq, int i, int j) {
+    Comparable t = pq[i];
     pq[i] = pq[j];
     pq[j] = t;
   }
