@@ -1,3 +1,4 @@
+package Datastructures.Heap;
 /*********************************************************************
  * This code makes a Priority Queue and returns tha max value from that
  * so the nam MaxPriorityQueue.
