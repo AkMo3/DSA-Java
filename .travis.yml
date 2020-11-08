@@ -2,6 +2,9 @@ language: java
 script:
   - find . -type f -name "*.java" > sources.txt
   - javac @sources.txt
+branches:
+  only:
+  - main
   
 notifications:
     webhooks: https://www.travisbuddy.com/
