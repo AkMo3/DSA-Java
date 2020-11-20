@@ -16,6 +16,19 @@
   
   First, we would congratulate you for joining our community:wave:. A warm welcome from our side:tada:. We look forward to your jounery with us. :boom:
   
+  Setting Environment :
+   1. Fork this repository.
+   2. Clone into your local repository 
+      `git clone git@github.com:{YOUR_USERNAME}/DSA-Java.git`
+   3. Change to a new branch 
+      `git checkout -b {BRANCH_NAME}`
+   4. Write your code.
+   5. Commit changes of your code 
+      `git add *`
+      `git commit -m "{COMMIT_MESSAGEE}"`
+   6. Push to git
+      `git push origin {BRANCH_NAME}`
+  
   First some ground rules :
    1. If making a PR for a existing issue commit message should be `Fixes: #{ISSUE_NO}`.
    2. If Issue doesn't exist add want to add a new featuer or change, make a Issue first and follow rule **1**.
