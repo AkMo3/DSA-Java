@@ -1,4 +1,4 @@
-package Algorithms.Sort;
+package Algorithm.Sort;
 
 public class MergeSort<E extends Comparable<E>> {
   /**
