@@ -1,4 +1,4 @@
-package Algorithms.Search;
+package Algorithm.Search;
 
 import java.util.Arrays;
 

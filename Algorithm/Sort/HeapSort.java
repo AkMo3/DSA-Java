@@ -1,4 +1,4 @@
-package Algorithms.Sort;
+package Algorithm.Sort;
 
 /*********************************************************************
  * This code makes a Priority Queue and returns tha max value from that
