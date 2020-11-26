@@ -38,7 +38,7 @@ public class SumOfDigits {
    */
   public static int digitSumRecursion(long n) {
     n = Math.abs(n);
-    return n < 10 ? (int) n : (int) (n + digitSumRecursion(n / 10));
+    return n < 10 ? (int) n : (int) (n % 10 + digitSumRecursion(n / 10));
   }
 
   /**
