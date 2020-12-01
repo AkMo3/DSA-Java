@@ -1,4 +1,4 @@
-package Datastructures.List;
+package Datastructure.List;
 
 import java.util.Arrays;
 import java.util.Iterator;
