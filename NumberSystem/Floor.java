@@ -1,4 +1,4 @@
-package Misc;
+package NumberSystem;
 
 /**
  * The program is used to find the floor values of the required input.

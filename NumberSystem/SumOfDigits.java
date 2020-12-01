@@ -1,3 +1,4 @@
+package NumberSystem;
 /***********************************************************************
  *
  * A function that returns the sum of digits in an integer.
