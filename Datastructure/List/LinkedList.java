@@ -6,6 +6,7 @@ public class LinkedList<E> {
 
   /**
    * Adds data in LinkedList
+   *
    * @param data Data of node to be added
    */
   void add(E data) {
@@ -23,15 +24,14 @@ public class LinkedList<E> {
 
   /**
    * Returns boolean is List empty
-   * @return true if list empty 
+   *
+   * @return true if list empty
    */
   boolean isEmpty() {
     return (head == null);
   }
 
-  /**
-   * Node class
-   */
+  /** Node class */
   static class Node<E> {
     E data;
     Node<E> next;
@@ -42,9 +42,7 @@ public class LinkedList<E> {
     }
   }
 
-  /**
-   * Prints elements of list
-   */
+  /** Prints elements of list */
   void print() {
     Node<E> temp = head;
     while (temp != null) {
@@ -55,20 +53,22 @@ public class LinkedList<E> {
 
   /**
    * return element at nth postion in List.
+   *
    * @param n element at nth position.
    */
   E get(int n) {
-  Node<E> temp = head;
-  int i = 0;
-  while (i < n) {
-    temp = temp.next;
-    i++;
-  }
-  return (temp.data);
+    Node<E> temp = head;
+    int i = 0;
+    while (i < n) {
+      temp = temp.next;
+      i++;
+    }
+    return (temp.data);
   }
 
   /**
    * Replace data of element at nth position with b
+   *
    * @param a position to be replaced
    * @param b Data of element to be replaced with
    */
@@ -85,6 +85,7 @@ public class LinkedList<E> {
 
   /**
    * Checks if element is present of not
+   *
    * @param a Element to check
    * @return true if element exit, else false
    */
@@ -103,6 +104,7 @@ public class LinkedList<E> {
 
   /**
    * Removes and returns last element in List
+   *
    * @return Last element in List
    * @throws Exception
    */
@@ -127,6 +129,7 @@ public class LinkedList<E> {
 
   /**
    * Fetches last element from List
+   *
    * @return Last element
    * @throws Exception
    */
