@@ -4,6 +4,10 @@ public class LinkedList<E> {
 
   Node<E> head;
 
+  /**
+   * Adds data in LinkedList
+   * @param data Data of node to be added
+   */
   void add(E data) {
     Node<E> ToAdd = new Node<E>(data);
     Node<E> temp = head;
@@ -17,10 +21,17 @@ public class LinkedList<E> {
     temp.next = ToAdd;
   }
 
+  /**
+   * Returns boolean is List empty
+   * @return true if list empty 
+   */
   boolean isEmpty() {
     return (head == null);
   }
 
+  /**
+   * Node class
+   */
   static class Node<E> {
     E data;
     Node<E> next;
@@ -31,6 +42,9 @@ public class LinkedList<E> {
     }
   }
 
+  /**
+   * Prints elements of list
+   */
   void print() {
     Node<E> temp = head;
     while (temp != null) {
@@ -39,17 +53,25 @@ public class LinkedList<E> {
     }
   }
 
-  void get(int n) {
-    Node<E> temp = head;
-    int i = 0;
-    while (i < n) {
-      temp = temp.next;
-      i++;
-    }
-
-    System.out.println(temp.data);
+  /**
+   * return element at nth postion in List.
+   * @param n element at nth position.
+   */
+  E get(int n) {
+  Node<E> temp = head;
+  int i = 0;
+  while (i < n) {
+    temp = temp.next;
+    i++;
+  }
+  return (temp.data);
   }
 
+  /**
+   * Replace data of element at nth position with b
+   * @param a position to be replaced
+   * @param b Data of element to be replaced with
+   */
   void set(int a, E b) {
     Node<E> temp = head;
     int i = 0;
@@ -61,6 +83,11 @@ public class LinkedList<E> {
     temp.data = b;
   }
 
+  /**
+   * Checks if element is present of not
+   * @param a Element to check
+   * @return true if element exit, else false
+   */
   boolean contains(E a) {
     Node<E> temp = head;
     while (temp != null) {
@@ -74,6 +101,11 @@ public class LinkedList<E> {
     return false;
   }
 
+  /**
+   * Removes and returns last element in List
+   * @return Last element in List
+   * @throws Exception
+   */
   E removeLast() throws Exception {
 
     Node<E> temp = head;
@@ -93,6 +125,11 @@ public class LinkedList<E> {
     return toremove.data;
   }
 
+  /**
+   * Fetches last element from List
+   * @return Last element
+   * @throws Exception
+   */
   E getlast() throws Exception {
     Node<E> temp = head;
     if (temp == null) {
