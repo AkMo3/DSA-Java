@@ -37,7 +37,7 @@ public class Mean {
    * This method returns the Mean value of an array. </br></br> NOTE: the returned value is double
    * althought the input array is int[].
    *
-   * @param array an array with double values
+   * @param array an array with int values
    * @return the mean value
    */
   public static double getMean(int[] array) {
