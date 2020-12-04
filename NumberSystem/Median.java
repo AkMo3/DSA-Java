@@ -30,7 +30,7 @@ public class Median {
 	
 	/**
 	 * This method returns the median value of an array.
-	 * Note that the returned value is always boolean.
+	 * Note that the returned value is always double.
 	 * @param array an array of double values
 	 * @return the median value
 	 */
@@ -49,7 +49,7 @@ public class Median {
 	
 	/**
 	 * This method returns the median value of an array.
-	 * Note that the returned value is always boolean despite the int[] input.
+	 * Note that the returned value is always double despite the int[] input.
 	 * @param array an array of int values
 	 * @return the median value
 	 */
