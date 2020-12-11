@@ -5,6 +5,7 @@ import java.util.NoSuchElementException;
 
 public class Stack<E> implements Iterable<E> {
 
+  /* Driver Code*/
   public static void main(String[] args) {
 
     Stack<Integer> st = new Stack<>();
@@ -21,6 +22,11 @@ public class Stack<E> implements Iterable<E> {
     }
   }
 
+  /**
+   * {@summary Node class for creating object of node.}
+   *
+   * @param E Datatype of node.
+   */
   @SuppressWarnings("hiding")
   class Node<E> {
 
@@ -38,6 +44,11 @@ public class Stack<E> implements Iterable<E> {
 
   Node<E> head = null;
 
+  /**
+   * Pushes data to stack.
+   *
+   * @param data Data that is to be added to Stack.
+   */
   public void push(E data) {
 
     if (head == null) {
@@ -54,6 +65,11 @@ public class Stack<E> implements Iterable<E> {
     }
   }
 
+  /**
+   * Returns last pushed element of stack.
+   *
+   * @return Latest element added to stack.
+   */
   public E pop() {
 
     if (head == null) {
@@ -68,22 +84,24 @@ public class Stack<E> implements Iterable<E> {
     return ToRemove.data;
   }
 
+  /** Iterator method to iterate through elements in stack. */
   @Override
   public Iterator<E> iterator() {
-    // TODO Auto-generated method stub
     return (new StackIterator());
   }
 
+  /** Iterator class for creation of main iterator method. */
   private class StackIterator implements Iterator<E> {
 
     private Node<E> current = head;
 
+    /** Returns boolean if the next element is available. */
     @Override
     public boolean hasNext() {
-      // TODO Auto-generated method stub
       return current != null;
     }
 
+    /** Returs the next element from stack. */
     @Override
     public E next() {
 
