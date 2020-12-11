@@ -32,7 +32,7 @@ public class Mode<E extends Comparable<? super E>> {
 
     // initializing a Map where the key is an element of the array and the value is the element's
     // appearances
-    HashMap<E, Integer> appCounter = new HashMap<>();
+    HashMap<E, Integer> freqCounter = new HashMap<>();
 
     // counting the max appearances
     int maxApps = 0;
@@ -42,16 +42,16 @@ public class Mode<E extends Comparable<? super E>> {
     for (E element : array) {
 
       // if it was already in the hash map
-      if (appCounter.containsKey(element)) {
+      if (freqCounter.containsKey(element)) {
         // then the appearances is last appearances + 1
-        apps = appCounter.get(element) + 1;
+        apps = freqCounter.get(element) + 1;
       } else {
         // else its the first appearance
         apps = 1;
       }
 
       // add the element with its respective appearances
-      appCounter.put(element, apps);
+      freqCounter.put(element, apps);
 
       // keep track of the max appearances
       if (maxApps < apps) {
@@ -63,7 +63,7 @@ public class Mode<E extends Comparable<? super E>> {
     ArrayList<E> modes = new ArrayList<>();
 
     // we iterate the hashmap with the iterator
-    Iterator<Map.Entry<E, Integer>> it = appCounter.entrySet().iterator();
+    Iterator<Map.Entry<E, Integer>> it = freqCounter.entrySet().iterator();
     while (it.hasNext()) {
       Map.Entry<E, Integer> pair = it.next();
 
