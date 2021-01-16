@@ -10,7 +10,7 @@
      Example :- `BinarySearch<Integer> bs = new BinarySearch<Integer>(a);`  
   3. Use functions of class by `{IDENTIFIER}.{FUNCTION_OF_CLASS}({PARAMETER_IF_ANY});`  
       Example :- `return bs.search(23);`
-  4. Found issue : Please inform us by making a new Issue in [Issues](https://github.com/AkMo3/DSA-Java/issues).
+  4. Found issue :- Please inform us by making a new Issue in [Issues](https://github.com/AkMo3/DSA-Java/issues).
   
   ### Contribution Guide :octocat:
   
